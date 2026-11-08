@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= time.nome %> — Catálogo de times</title>
+</head>
+<body>
+  <main>
+    <h1><%= time.nome %></h1>
+    <dl>
+      <dt>Estádio</dt>
+      <dd><%= time.estadio %></dd>
+      <dt>Cidade</dt>
+      <dd><%= time.cidade %></dd>
+      <dt>ID</dt>
+      <dd><%= time.id %></dd>
+    </dl>
+    <a href="/times">Voltar à lista</a>
+  </main>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Times cadastrados</title>
+</head>
+<body>
+  <main>
+    <h1>Times cadastrados</h1>
+    <% if (times.length === 0) { %>
+      <p>Nenhum time cadastrado.</p>
+    <% } else { %>
+      <table>
+        <caption>Lista de times, estádios e cidades</caption>
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Estádio</th>
+            <th scope="col">Cidade</th>
+            <th scope="col">Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% times.forEach((time) => { %>
+            <tr>
+              <td><%= time.id %></td>
+              <td><%= time.nome %></td>
+              <td><%= time.estadio %></td>
+              <td><%= time.cidade %></td>
+              <td><a href="/times/<%= time.id %>" aria-label="Ver detalhes de <%= time.nome %>">Ver detalhes</a></td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    <% } %>
+    <p><a href="/">Voltar ao início</a></p>
+  </main>
+</body>
+</html>
